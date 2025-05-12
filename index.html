@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guilded Bot Control Panel</title>
+    <script defer src="script.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        input, button { margin: 10px; padding: 8px; }
+        #log { max-height: 200px; overflow-y: auto; background: #f4f4f4; padding: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Guilded Bot Control Panel</h1>
+    <p>Enter your Guilded API token to activate the bot.</p>
+
+    <input type="text" id="apiToken" placeholder="Enter API Token">
+    <button onclick="startBot()">Start Bot</button>
+
+    <h2>Commands</h2>
+    <button onclick="sendCommand('!ping')">Ping</button>
+    <button onclick="sendCommand('!random')">Random Number</button>
+    <button onclick="sendCommand('!flip')">Coin Flip</button>
+    <button onclick="sendCommand('!chance')">25% Chance Test</button>
+
+    <h2>Bot Logs</h2>
+    <div id="log">Waiting for activity...</div>
+</body>
+</html>
