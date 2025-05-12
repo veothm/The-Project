@@ -12,16 +12,15 @@
 </head>
 <body>
     <h1>Guilded Bot Control Panel</h1>
-    <p>Enter your Guilded API token to activate the bot.</p>
+    <p>Enter your Guilded API token & channel ID.</p>
 
     <input type="text" id="apiToken" placeholder="Enter API Token">
+    <input type="text" id="channelId" placeholder="Enter Channel ID">
     <button onclick="startBot()">Start Bot</button>
 
-    <h2>Commands</h2>
-    <button onclick="sendCommand('!ping')">Ping</button>
-    <button onclick="sendCommand('!random')">Random Number</button>
-    <button onclick="sendCommand('!flip')">Coin Flip</button>
-    <button onclick="sendCommand('!chance')">25% Chance Test</button>
+    <h2>Send Custom Message</h2>
+    <input type="text" id="customMessage" placeholder="Enter Message">
+    <button onclick="sendCustomMessage()">Send Message</button>
 
     <h2>Bot Logs</h2>
     <div id="log">Waiting for activity...</div>
